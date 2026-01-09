@@ -15,6 +15,7 @@ const translations: Translations = {
   'nav.testimonials': { fr: 'Témoignages', en: 'Testimonials' },
   'nav.tech': { fr: 'Tech', en: 'Tech' },
   'nav.contact': { fr: 'Contact', en: 'Contact' },
+  'nav.faq': { fr: 'FAQ', en: 'FAQ' },
   
   // Hero
   'hero.title': { 
@@ -22,11 +23,12 @@ const translations: Translations = {
     en: 'On-chain accounting, simplified at last.' 
   },
   'hero.subtitle': { 
-    fr: 'Utilisez la puissance du réseau Hedera pour une transparence totale et une traçabilité immuable de vos transactions comptables.', 
-    en: 'Leverage the power of Hedera network for total transparency and immutable traceability of your accounting transactions.' 
+    fr: 'Bénéficiez d\'une transparence totale et d\'une traçabilité immuable de vos transactions comptables grâce à la blockchain.', 
+    en: 'Benefit from total transparency and immutable traceability of your accounting transactions with blockchain technology.' 
   },
   'hero.cta': { fr: 'Lancer l\'App', en: 'Launch App' },
   'hero.github': { fr: 'Voir sur GitHub', en: 'View on GitHub' },
+  'hero.badge': { fr: 'Comptabilité Blockchain', en: 'Blockchain Accounting' },
   
   // Video Section
   'video.title': { fr: 'Découvrez Comptara en action', en: 'See Comptara in action' },
@@ -41,15 +43,15 @@ const translations: Translations = {
     fr: 'Tout ce dont vous avez besoin pour une comptabilité moderne et sécurisée', 
     en: 'Everything you need for modern and secure accounting' 
   },
-  'features.hedera.title': { fr: 'Hedera Testnet', en: 'Hedera Testnet' },
-  'features.hedera.desc': { 
-    fr: 'Intégration Hashpack pour des transactions immuables sur la blockchain.', 
-    en: 'Hashpack integration for immutable blockchain transactions.' 
+  'features.blockchain.title': { fr: 'Blockchain Sécurisée', en: 'Secure Blockchain' },
+  'features.blockchain.desc': { 
+    fr: 'Transactions immuables et vérifiables sur la blockchain.', 
+    en: 'Immutable and verifiable transactions on the blockchain.' 
   },
   'features.audit.title': { fr: 'Audit Real-time', en: 'Real-time Audit' },
   'features.audit.desc': { 
-    fr: 'Visualisation directe de vos transactions sur HashScan.', 
-    en: 'Direct visualization of your transactions on HashScan.' 
+    fr: 'Visualisation directe et traçabilité complète de vos transactions.', 
+    en: 'Direct visualization and complete traceability of your transactions.' 
   },
   'features.offline.title': { fr: 'Offline Sync', en: 'Offline Sync' },
   'features.offline.desc': { 
@@ -86,6 +88,79 @@ const translations: Translations = {
     en: 'Professionals who trust Comptara' 
   },
   
+  // FAQ
+  'faq.title': { fr: 'Questions fréquentes', en: 'Frequently Asked Questions' },
+  'faq.subtitle': { 
+    fr: 'Trouvez rapidement les réponses à vos questions', 
+    en: 'Quickly find answers to your questions' 
+  },
+  'faq.q1': { 
+    fr: 'Comment fonctionne la comptabilité blockchain ?', 
+    en: 'How does blockchain accounting work?' 
+  },
+  'faq.a1': { 
+    fr: 'Comptara enregistre chaque transaction sur la blockchain, garantissant une traçabilité totale et une immutabilité des données. Chaque écriture est horodatée et vérifiable.', 
+    en: 'Comptara records each transaction on the blockchain, ensuring complete traceability and data immutability. Each entry is timestamped and verifiable.' 
+  },
+  'faq.q2': { 
+    fr: 'Mes données sont-elles sécurisées ?', 
+    en: 'Is my data secure?' 
+  },
+  'faq.a2': { 
+    fr: 'Oui, toutes vos données sont chiffrées de bout en bout. La blockchain garantit l\'intégrité et l\'authenticité de chaque transaction.', 
+    en: 'Yes, all your data is end-to-end encrypted. The blockchain ensures the integrity and authenticity of each transaction.' 
+  },
+  'faq.q3': { 
+    fr: 'Puis-je utiliser Comptara hors ligne ?', 
+    en: 'Can I use Comptara offline?' 
+  },
+  'faq.a3': { 
+    fr: 'Absolument ! Comptara fonctionne en mode hors ligne avec synchronisation automatique dès que vous retrouvez une connexion internet.', 
+    en: 'Absolutely! Comptara works offline with automatic synchronization as soon as you regain an internet connection.' 
+  },
+  'faq.q4': { 
+    fr: 'Quels formats d\'export sont disponibles ?', 
+    en: 'What export formats are available?' 
+  },
+  'faq.a4': { 
+    fr: 'Vous pouvez exporter vos données en PDF et CSV en un clic. Les rapports sont formatés pour une utilisation professionnelle immédiate.', 
+    en: 'You can export your data to PDF and CSV with one click. Reports are formatted for immediate professional use.' 
+  },
+  'faq.q5': { 
+    fr: 'Comment contacter le support ?', 
+    en: 'How can I contact support?' 
+  },
+  'faq.a5': { 
+    fr: 'Vous pouvez nous contacter par email à ubozaxz@gmail.com ou via le formulaire de contact sur cette page.', 
+    en: 'You can contact us by email at ubozaxz@gmail.com or via the contact form on this page.' 
+  },
+  
+  // Comparison
+  'comparison.title': { fr: 'Comptara vs Comptabilité Traditionnelle', en: 'Comptara vs Traditional Accounting' },
+  'comparison.subtitle': { 
+    fr: 'Découvrez pourquoi Comptara révolutionne la comptabilité', 
+    en: 'Discover why Comptara revolutionizes accounting' 
+  },
+  'comparison.features': { fr: 'Fonctionnalités', en: 'Features' },
+  'comparison.traditional': { fr: 'Traditionnel', en: 'Traditional' },
+  'comparison.feature1': { fr: 'Traçabilité blockchain', en: 'Blockchain traceability' },
+  'comparison.feature2': { fr: 'Données immuables', en: 'Immutable data' },
+  'comparison.feature3': { fr: 'Export PDF/CSV', en: 'PDF/CSV export' },
+  'comparison.feature4': { fr: 'Mode hors ligne', en: 'Offline mode' },
+  'comparison.feature5': { fr: 'Sauvegarde cloud', en: 'Cloud backup' },
+  'comparison.feature6': { fr: 'Audit en temps réel', en: 'Real-time audit' },
+  'comparison.cta': { fr: 'Essayer Comptara gratuitement', en: 'Try Comptara for free' },
+  
+  // CTA Section
+  'cta.badge': { fr: 'Prêt à commencer ?', en: 'Ready to start?' },
+  'cta.title': { fr: 'Transformez votre comptabilité dès aujourd\'hui', en: 'Transform your accounting today' },
+  'cta.subtitle': { 
+    fr: 'Rejoignez les professionnels qui font confiance à Comptara pour une comptabilité transparente et sécurisée.', 
+    en: 'Join the professionals who trust Comptara for transparent and secure accounting.' 
+  },
+  'cta.start': { fr: 'Commencer maintenant', en: 'Start now' },
+  'cta.github': { fr: 'Voir le code source', en: 'View source code' },
+  
   // Contact
   'contact.title': { fr: 'Contactez-nous', en: 'Contact Us' },
   'contact.subtitle': { 
@@ -100,6 +175,7 @@ const translations: Translations = {
     fr: 'Rejoignez notre communauté open-source sur GitHub', 
     en: 'Join our open-source community on GitHub' 
   },
+  'contact.directEmail': { fr: 'Ou contactez-nous directement :', en: 'Or contact us directly:' },
   
   // Footer
   'footer.rights': { fr: 'Tous droits réservés.', en: 'All rights reserved.' },

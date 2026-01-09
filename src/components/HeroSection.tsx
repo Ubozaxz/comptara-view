@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-accent mr-2" />
-            <span className="text-sm font-medium text-accent">Powered by Hedera Hashgraph</span>
+            <span className="text-sm font-medium text-accent">{t('hero.badge')}</span>
           </div>
 
           {/* Main Title */}
@@ -62,7 +62,7 @@ const HeroSection = () => {
               { value: '100%', label: 'Transparent' },
               { value: '0', label: 'Downtime' },
               { value: '∞', label: 'Immutable' },
-              { value: '<1s', label: 'Finality' },
+              { value: '<1s', label: 'Sync' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-foreground">{stat.value}</div>
