@@ -6,9 +6,9 @@ const TechStackSection = () => {
   const technologies = [
     { name: 'Next.js', color: 'from-gray-600 to-gray-800' },
     { name: 'Tailwind CSS', color: 'from-cyan-500 to-blue-500' },
-    { name: 'Hedera Hashgraph', color: 'from-purple-500 to-indigo-600' },
-    { name: 'Hashpack', color: 'from-violet-500 to-purple-600' },
+    { name: 'Blockchain', color: 'from-purple-500 to-indigo-600' },
     { name: 'TypeScript', color: 'from-blue-500 to-blue-700' },
+    { name: 'React', color: 'from-cyan-400 to-blue-500' },
   ];
 
   return (

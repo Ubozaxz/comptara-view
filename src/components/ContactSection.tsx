@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Github } from 'lucide-react';
+import { Send, Github, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,11 +16,13 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Open email client with pre-filled content
+    const mailtoLink = `mailto:ubozaxz@gmail.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    window.location.href = mailtoLink;
     toast({
       title: t('contact.send'),
-      description: "Message sent successfully!",
+      description: "Opening your email client...",
     });
-    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
@@ -81,8 +83,20 @@ const ContactSection = () => {
             </Button>
           </form>
 
+          {/* Direct Email */}
+          <div className="mt-8 text-center p-4 rounded-xl bg-card border border-border">
+            <p className="text-muted-foreground mb-2">{t('contact.directEmail')}</p>
+            <a 
+              href="mailto:ubozaxz@gmail.com" 
+              className="inline-flex items-center text-accent hover:underline font-medium"
+            >
+              <Mail className="w-4 h-4 mr-2" />
+              ubozaxz@gmail.com
+            </a>
+          </div>
+
           {/* GitHub CTA */}
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <p className="text-muted-foreground mb-4">{t('contact.github')}</p>
             <Button variant="outline" asChild>
               <a

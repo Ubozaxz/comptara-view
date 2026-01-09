@@ -4,9 +4,11 @@ import {
   WifiOff, 
   FileText, 
   Cloud, 
-  Shield 
+  Shield,
+  ArrowRight
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
 
 const FeaturesSection = () => {
   const { t } = useLanguage();
@@ -14,8 +16,8 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: Blocks,
-      title: t('features.hedera.title'),
-      description: t('features.hedera.desc'),
+      title: t('features.blockchain.title'),
+      description: t('features.blockchain.desc'),
     },
     {
       icon: Search,
@@ -79,6 +81,20 @@ const FeaturesSection = () => {
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <Button variant="hero" size="lg" asChild>
+            <a
+              href="https://ledger-on-chain-comptara.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t('hero.cta')}
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
