@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import comptaraLogo from '@/assets/comptara-logo.jpg';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -10,13 +11,15 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 rounded-md bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center">
-                <span className="text-white font-bold text-xs">C</span>
-              </div>
+              <img 
+                src={comptaraLogo} 
+                alt="Comptara" 
+                className="w-8 h-8 rounded-md object-cover"
+              />
               <span className="font-semibold text-foreground">Comptara</span>
             </div>
             <span className="text-sm text-muted-foreground">
-              © 2024-2025 {t('footer.rights')}
+              © 2024-2026 {t('footer.rights')}
             </span>
           </div>
 

@@ -3,6 +3,7 @@ import { Menu, X, Github, Moon, Sun, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
+import comptaraLogo from '@/assets/comptara-logo.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
-            </div>
+            <img 
+              src={comptaraLogo} 
+              alt="Comptara" 
+              className="w-8 h-8 rounded-lg object-cover"
+            />
             <span className="text-xl font-bold text-foreground">Comptara</span>
           </a>
 
