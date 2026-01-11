@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'fr' | 'en';
 
@@ -191,7 +191,21 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('fr');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check localStorage first, then browser preference
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('comptara-language') as Language;
+      if (saved) return saved;
+      const browserLang = navigator.language.slice(0, 2);
+      return browserLang === 'fr' ? 'fr' : 'en';
+    }
+    return 'fr';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('comptara-language', language);
+    document.documentElement.lang = language;
+  }, [language]);
 
   const t = (key: string): string => {
     return translations[key]?.[language] || key;
