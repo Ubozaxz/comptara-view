@@ -1,5 +1,3 @@
-import { LanguageProvider } from '@/contexts/LanguageContext';
-import { ThemeProvider } from '@/contexts/ThemeContext';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import VideoSection from '@/components/VideoSection';
@@ -14,25 +12,21 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <div className="min-h-screen bg-background">
-          <Header />
-          <main>
-            <HeroSection />
-            <VideoSection />
-            <FeaturesSection />
-            <ComparisonSection />
-            <TechStackSection />
-            <TestimonialsSection />
-            <FAQSection />
-            <CTASection />
-            <ContactSection />
-          </main>
-          <Footer />
-        </div>
-      </LanguageProvider>
-    </ThemeProvider>
+    <div className="min-h-screen bg-background transition-colors duration-300">
+      <Header />
+      <main>
+        <HeroSection />
+        <VideoSection />
+        <FeaturesSection />
+        <ComparisonSection />
+        <TechStackSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <CTASection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
